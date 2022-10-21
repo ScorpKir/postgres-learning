@@ -1,5 +1,3 @@
-SET search_path = "scorpkir";
-
 -- Создаём таблицу продавец
 CREATE TABLE Salesman
 (

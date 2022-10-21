@@ -1,5 +1,3 @@
-SET search_path = "scorpkir";
-
 -- Вставляем жанры
 INSERT INTO genre ("Name") VALUES
 ('Компьютерная литература'),
