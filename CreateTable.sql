@@ -1,3 +1,12 @@
+-- Удаляем таблицы если они уже до этого существовали
+DROP TABLE IF EXISTS BookSale;
+DROP TABLE IF EXISTS Salesman;
+DROP TABLE IF EXISTS WritingParticipation;
+DROP TABLE IF EXISTS Author;
+DROP TABLE IF EXISTS Circulation;
+DROP TABLE IF EXISTS Book;
+DROP TABLE IF EXISTS Genre;
+
 -- Создаём таблицу продавец
 CREATE TABLE Salesman
 (
