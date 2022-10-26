@@ -34,10 +34,10 @@ CREATE TABLE Circulation
     "BookCipher" VARCHAR(10) NOT NULL,
     "Publisher" VARCHAR(30) NOT NULL,
     "ReceiptDate" DATE NOT NULL,
-    "PurchasePrice" MONEY NOT NULL,
+    "PurchasePrice" NUMERIC NOT NULL,
     "ReceivedCopies" INT NOT NULL,
     "SoldCopies" INT DEFAULT 0,
-    "CurrentRevenue" MONEY DEFAULT 0,
+    "CurrentRevenue" NUMERIC DEFAULT 0,
     FOREIGN KEY ("BookCipher") REFERENCES Book("Cipher") ON DELETE RESTRICT
 );
 

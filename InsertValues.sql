@@ -141,5 +141,3 @@ INSERT INTO booksale("SalesmanID", "CirculationID") VALUES
 (3, 9),
 (7, 8),
 (4, 11);
-
-
