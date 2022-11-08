@@ -44,6 +44,7 @@ CREATE TABLE Circulation
     "Publisher" VARCHAR(30) NOT NULL,
     "ReceiptDate" DATE NOT NULL,
     "PurchasePrice" NUMERIC NOT NULL,
+    "SellPrice" NUMERIC NOT NULL,
     "ReceivedCopies" INT NOT NULL,
     "SoldCopies" INT DEFAULT 0,
     "CurrentRevenue" NUMERIC DEFAULT 0,
@@ -66,6 +67,8 @@ CREATE TABLE BookSale
     ID SERIAL PRIMARY KEY,
     "CirculationID" INT NOT NULL,
     "SalesmanID" INT NOT NULL,
+    "CountCopies" INT NOT NULL,
     FOREIGN KEY ("CirculationID") REFERENCES Circulation("ID") ON DELETE RESTRICT,
-    FOREIGN KEY ("SalesmanID") REFERENCES Salesman("ID") ON DELETE RESTRICT
+    FOREIGN KEY ("SalesmanID") REFERENCES Salesman("ID") ON DELETE RESTRICT,
+    CHECK ( "CountCopies" >= 1 )
 );
